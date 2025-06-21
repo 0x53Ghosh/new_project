@@ -16,6 +16,7 @@ export PROJECT_ROOT="$PWD"
 # ==============================================================================
 # Uses environment variable PROJECT_SSH_KEY set in your ~/.bashrc
 if [[ -n "$PROJECT_SSH_KEY" && -f "$PROJECT_SSH_KEY" ]]; then
+    eval "$(ssh-agent -s)" > /dev/null
     ssh-add "$PROJECT_SSH_KEY" 2>/dev/null
 fi
 
