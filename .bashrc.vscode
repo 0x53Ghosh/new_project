@@ -2,7 +2,6 @@
 # ==============================================================================
 # .bashrc.vscode - Generic Project Workspace Configuration
 # ==============================================================================
-# Safe for public repositories - no hardcoded paths or sensitive data
 # This file creates a secure, isolated workspace environment
 
 # ==============================================================================
@@ -10,15 +9,6 @@
 # ==============================================================================
 export PROJECT_NAME="$(basename "$PWD")"
 export PROJECT_ROOT="$PWD"
-
-# ==============================================================================
-# 🔑 SSH KEY MANAGEMENT
-# ==============================================================================
-# Uses environment variable PROJECT_SSH_KEY set in your ~/.bashrc
-if [[ -n "$PROJECT_SSH_KEY" && -f "$PROJECT_SSH_KEY" ]]; then
-    eval "$(ssh-agent -s)" > /dev/null
-    ssh-add "$PROJECT_SSH_KEY" 2>/dev/null
-fi
 
 # ==============================================================================
 # 🛤️  PATH EXTENSIONS
