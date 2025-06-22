@@ -1,0 +1,19 @@
+{
+  "terminal.integrated.profiles.linux": {
+    "ProjectEnv": {
+      "path": "/bin/bash",
+      "args": ["--rcfile", "${workspaceFolder}/bootstrap/.project.env"]
+    }
+  },
+  // "files.exclude": {
+  //   "**/.git": true,
+  //   "**/.tmp": true,
+  //   "**/.envrc": true,
+  //   "**/Makefile": true,
+  //   "**/shell.nix": true,
+  //   "**/.vscode": false,
+  //   "**/bootstrap": true,
+  //   "**/README.md": true
+  // },
+  "terminal.integrated.defaultProfile.linux": "ProjectEnv"
+}
