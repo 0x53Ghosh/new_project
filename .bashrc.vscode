@@ -95,22 +95,12 @@ cd()
 
 HIDDEN_ITEMS=(
     ".bashrc.vscode"
-    ".env"
-    ".env.local" 
-    ".env.development"
+    "Makefile"
     ".git"
     ".gitignore"
     ".vscode"
-    "node_modules"
-    "__pycache__"
-    ".pytest_cache"
-    ".coverage"
-    "venv"
-    ".venv"
-    "vendor"
-    "target"
-    "build"
-    "dist"
+    "shell.nix"
+    "README.md"
 )
 
 override_ls()
@@ -184,45 +174,6 @@ export PS1='$ '
 
 # Alternative: Show project-relative path in prompt
 # export PS1='$(override_pwd) $ '
-
-# ==============================================================================
-# 🌍 ENVIRONMENT VARIABLES
-# ==============================================================================
-# Load environment files in order of precedence
-if [[ -f ".env.local" ]]; then
-    source .env.local
-fi
-
-if [[ -f ".env.development" ]]; then
-    source .env.development
-fi
-
-if [[ -f ".env" ]]; then
-    source .env
-fi
-
-# ==============================================================================
-# 🎯 PROJECT-SPECIFIC CUSTOMIZATION SECTION
-# ==============================================================================
-# Add your project-specific aliases, functions, and configurations below:
-
-# Example: Node.js project
-# alias start="npm run dev"
-# alias build="npm run build"
-# alias test="npm test"
-
-# Example: Python project
-# alias run="python main.py"
-# alias venv="source venv/bin/activate"
-
-# Example: Go project
-# alias run="go run ."
-# alias build="go build"
-
-# Example: Docker project
-# alias up="docker-compose up -d"
-# alias down="docker-compose down"
-# alias logs="docker-compose logs -f"
 
 # ==============================================================================
 # 🚨 STARTUP MESSAGE
